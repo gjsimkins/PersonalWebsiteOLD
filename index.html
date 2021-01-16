@@ -32,7 +32,7 @@
             <h1>Hello!</h1>
             <figure class="headshot">
                 <picture>
-                    <img src="headshot.jpg" alt="Picture of me" width="200px">
+                    <img src="headshot.jpg" alt="Picture of me" width="200">
                 </picture>
                 <figcaption>
                     <code>std::cout << "Hello World!";</code>
@@ -52,7 +52,7 @@
             </p>
             </div>
             <div style="display: inline-flex;">
-                <span class="projects">
+                <div class="projects">
                     <h2>Projects</h2>
                     <aside>
                         <i>
@@ -64,8 +64,8 @@
                         <li>Pokemon Generator</li>
                         <li>TBD</li>
                     </ol>
-                </span>  
-                <span class="skills">
+                </div>  
+                <div class="skills">
                     <h2>Skills</h2>
                     <ul>
                         <li>Java</li>
@@ -75,10 +75,10 @@
                         <li>CSS</li>
                         <li>Javascript</li>
                     </ul>
-                </span>
+                </div>
             </div>
             <div class="Schedule">
-                <table border="solid"> 
+                <table style="border: solid black;"> 
                     <colgroup>
                         <col class="sunday">
                         <col class="monday">
@@ -149,8 +149,8 @@
                             <td> </td>
                         </tr>
                     </tbody>
-                    <caption align="bottom"><strong><i>I also have work that changes everyweek</i></strong></caption>
                 </table>
+                <caption><strong><i>I also have work that changes everyweek</i></strong></caption>
             </div>
             <details class="contact-me">
                 <summary>Contact Me</summary>
@@ -175,7 +175,7 @@
                     </div>
                     <div class="form-row">
                         <label for="todays-date">Today's date: </label>
-                        <input type="date" name="todays-date">
+                        <input type="date" id="todays-date" name="todays-date">
                     </div>
                     <em>The rest are for fun :)</em>
                     <div class="form-row">
@@ -234,7 +234,7 @@
                     </div>
                     <div class="form-row">
                         <label for="rating-games">How much do you play video games?</label>
-                        <input type="range" min="0" max="100">
+                        <input type="range" min="0" max="100" name="rating-games" id="rating-games">
                     </div>
                     <div class="form-row">
                         <label for="agreement">By clicking this box I understand that this form actually did nothing and the data will not even be stored.</label>
@@ -306,12 +306,17 @@
                         <source src="007-squirtle.mp3"> 
                     </audio>
                 </figure>
-                <canvas id="my-canvas" width="300" height="150"></canvas>
+                
                 <div>
-                    <svg width="600" height="70">
-                        <rect width="600" height="70" style="fill:rgb(99, 99, 153);stroke-width:10;stroke:rgb(0,0,0)" />
-                        <text fill="#ffffff" font-size="20" x="10" y="35">If the video doesn't load please click on the link to YouTube. Thank you.</text>
-                    </svg>
+                    <span>
+                        <svg width="600" height="70">
+                            <rect width="600" height="70" style="fill:rgb(99, 99, 153);stroke-width:10;stroke:rgb(0,0,0)" />
+                            <text fill="#ffffff" font-size="20" x="10" y="35">If the video doesn't load please click on the link to YouTube. Thank you.</text>
+                        </svg>
+                    </span>
+                    <span>
+                        <canvas id="my-canvas" width="300" height="150"></canvas>
+                    </span>
                 </div>
             </template>
         </footer>
